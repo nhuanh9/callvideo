@@ -1,4 +1,7 @@
-<form [formGroup]="loginForm" (ngSubmit)="signIn()">
-  <label>User ID:<input type="text" formControlName="uid" /></label>
-  <button type="submit" [disabled]="!loginForm.valid">Sign In</button>
-</form>
+
+<button (click)="call('superhero1')">
+  Call as user
+</button>
+<button (click)="call('superhero2')">
+  Call as Admin
+</button>

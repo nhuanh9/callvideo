@@ -17,4 +17,10 @@ export class LoginComponent {
       this.router.navigate(['call']);
     });
   }
+
+  call(uid) {
+    this.chat.login(uid).subscribe(signedUser => {
+      this.router.navigate(['call']);
+    });
+  }
 }

@@ -18,7 +18,6 @@ export class CometChatService {
 
   constructor() {
     CometChat.init(environment.appId).then(_ => {
-      console.log('Comet Chat initialized.');
       this.initialized.next(true);
     }, error => {
       console.log('Initialization error: ' + error);
@@ -36,6 +35,7 @@ export class CometChatService {
       );
     });
   }
+
   public getSignedIn(): string {
     return this.signedIn;
   }
@@ -113,16 +113,19 @@ export class CometChatService {
     }));
   }
 
-  public getIncomingCalls (): Observable <any> {
+  public getIncomingCalls(): Observable<any> {
     return this.incomingCall$;
   }
-  public getOutgoingCalls (): Observable <any> {
+
+  public getOutgoingCalls(): Observable<any> {
     return this.outgoingCall$;
   }
-  public getOngoingCalls (): Observable <any> {
+
+  public getOngoingCalls(): Observable<any> {
     return this.ongoingCall$;
   }
-  public getUsers (): Observable <any> {
+
+  public getUsers(): Observable<any> {
     return this.users$;
   }
 
